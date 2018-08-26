@@ -4,6 +4,7 @@ import {Component} from "react";
 const REACT_APP_API = "https://localhost:44311";
 const REACT_APP_API_GET_CASE_TOKENS_BY_TOKEN = REACT_APP_API.concat('/api/CaseTokens/GetCaseTokenByToken/');
 const REACT_APP_API_GET_CASE = REACT_APP_API.concat('/api/Cases/');
+const REACT_APP_API_CASE_RELATIONSHIP = REACT_APP_API.concat('/api/CaseRelationships/');
 const JOIN_CASE_TOKEN_KEY = 'joinCaseToken';
 
 class JoinCase extends Component {
@@ -34,7 +35,8 @@ class JoinCase extends Component {
             }).then(response => {
                 if (response.status === 200) {
                     response.json().then(response => {
-                            return getCase(response['caseId']);
+                            self.setState({'relationshipType':response['relationshipType']});
+                            getCase(response['caseId']);
                         }
                     );
                 }
@@ -55,7 +57,7 @@ class JoinCase extends Component {
             }).then(response => {
                 if (response.status === 200) {
                     return response.json().then(response => {
-                        self.setState({'caseName':response['name']})
+                        self.setState({'caseName':response['name'], 'caseId':response['id']})
                     })
                 }
                 else{
@@ -65,6 +67,8 @@ class JoinCase extends Component {
         }
     }
 
+
+
     render() {
         let isLoggedIn = localStorage.userId != null;
         if(!isLoggedIn){
@@ -72,12 +76,38 @@ class JoinCase extends Component {
             return <div></div>
         }
 
+        var self = this;
+
         return (
         <div className='join-case'>
             <h1>Join Case</h1>
-            <p>Click below to join {this.state.caseName}</p>
+            <p>You were invited to join the case named <b>{this.state.caseName}</b></p>
+            <button onClick={joinCase}>Join Case</button>
         </div>
-        )
+        );
+
+        function joinCase(){
+            fetch(REACT_APP_API_CASE_RELATIONSHIP,{
+                method: 'POST',
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    "caseId": self.state.caseId,
+                    "userId": localStorage.userId,
+                    "relationshipType": self.state.relationshipType
+                })
+            }).then(response => {
+                if (response.status === 201) {
+                    window.location.href = '/cases'
+                }
+                else {
+                    console.log(response);
+                    alert("Error with this great way of telling you that!");
+                }
+            });
+        }
     }
 }
 
