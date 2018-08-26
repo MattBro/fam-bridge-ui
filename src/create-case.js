@@ -24,7 +24,7 @@ class CreateCase extends Component {
         }).then(response => {
             if(response.status === 201){
                 response.json().then(response => {
-
+                        localStorage.setItem('caseId', response['id'])
                     }
                 );
 

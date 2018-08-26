@@ -2,15 +2,14 @@ import React from 'react';
 import {Component} from "react";
 import {Link} from "react-router-dom";
 import {Button} from "react-bootstrap"
-import Main from "./main";
 
-class Footer extends Component {
+class SignOutButton extends Component {
     constructor(){
         super();
-        this.handleClick = this.handleClick.bind(this);
+        SignOutButton.handleClick = SignOutButton.handleClick.bind(this);
     }
-    handleClick(){
-        Footer.signOut()
+    static handleClick(){
+        SignOutButton.signOut()
     }
     static signOut(){
         localStorage.clear()
@@ -18,12 +17,11 @@ class Footer extends Component {
     render() {
         let isLoggedIn = localStorage.userId != null;
         if(isLoggedIn){
-            return <Link to={'/'} onClick={this.handleClick}><Button>Sign Out</Button></Link>
-        }else{
-            return <Main />
+            return <Link to={'/'} onClick={SignOutButton.handleClick}><Button>Sign Out</Button></Link>
         }
+        return <div></div>
     }
 }
 
 
-export default Footer;
+export default SignOutButton;

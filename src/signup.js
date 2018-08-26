@@ -1,19 +1,21 @@
 import React from 'react';
 import {Component} from "react";
-import {Form, FormControl, FormGroup, HelpBlock, ControlLabel, Button, Col} from "react-bootstrap"
-
+import {Form, FormControl, FormGroup, HelpBlock, ControlLabel, Button, Col, ButtonGroup} from "react-bootstrap"
+import {Link} from "react-router-dom";
+const REACT_APP_API = "https://localhost:44311";
 const uuidv1 = require('uuid/v1');
 
 class Signup extends Component {
     constructor(props,context){
-        super(props,context)
+        super(props,context);
+        this.isCaseWorker = false;
     }
 
     handleSubmit(event){
         event.preventDefault();
         this.token = uuidv1();
 
-        fetch('https://localhost:44311/api/Users', {
+        fetch(REACT_APP_API.concat('/api/Users'), {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',
@@ -35,9 +37,11 @@ class Signup extends Component {
                 );
                 localStorage.setItem('firstName',this.inputFirstName.value);
                 localStorage.setItem('sessionToken', this.token);
-                localStorage.setItem('userId',response.json().valueOf()['id']);
 
-                window.location.href = '/create-case'
+                if(this.isCaseWorker)
+                    window.location.href = '/create-case'
+                else
+                    window.location.href = '/join-case'
             }
             else{
                 console.log(response);
@@ -49,7 +53,7 @@ class Signup extends Component {
     render() {
         return (
             <div className="signup">
-                <h1>Sign Up</h1>
+                <h1>Sign up</h1>
                 <Form horizontal onSubmit={this.handleSubmit.bind(this)}>
                     <FormGroup>
                         <Col componentClass={ControlLabel} sm={2}>
@@ -88,9 +92,20 @@ class Signup extends Component {
                         </Col>
                     </FormGroup>
                     <FormGroup>
+                        <Col componentClass={ControlLabel} sm={2}>
+                            Are you a case worker?
+                        </Col>
+
+                    <ButtonGroup>
+                        <Button onClick={()=>this.isCaseWorker=true}>Yes</Button>
+                        <Button onClick={()=>this.isCaseWorker=false}>No</Button>
+                    </ButtonGroup>
+                    </FormGroup>
+                    <FormGroup>
                         <Button type="submit">Sign up</Button>
                     </FormGroup>
                 </Form>
+                <Link to={'/login'}><Button>Log in</Button></Link>
             </div>
         )
     }

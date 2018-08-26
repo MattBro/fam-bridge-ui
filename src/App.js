@@ -4,10 +4,12 @@ import './css/App.css';
 import { Switch, Route, Link } from 'react-router-dom'
 import Login from './login'
 import Signup from './signup'
-import Main from './main'
 import CreateCase from "./create-case";
 import CaseCreated from "./case-created";
-import Footer from "./footer";
+import SignOutButton from "./sign-out-button";
+import Cases from "./cases"
+import JoinCase from "./join-case"
+import LoginOrSignup from "./login-or-signup";
 
 class App extends Component {
   render() {
@@ -18,13 +20,16 @@ class App extends Component {
           <h1 className="App-title">Welcome to FamBridge</h1>
         </header>
           <Switch>
-              {/*<Route exact path='/' component={Main}/>*/}
+              <Route path='/' exact component={LoginOrSignup}/>
+              <Route path='/welcome' component={LoginOrSignup}/>
+              <Route path='/join-case' component={JoinCase}/>
+              <Route path='/cases' component={Cases}/>
               <Route path='/login' component={Login}/>
               <Route path='/signup' component={Signup}/>
               <Route path='/create-case' component={CreateCase}/>
               <Route path='/case-created' component={CaseCreated}/>
           </Switch>
-        <Footer/>
+        <SignOutButton/>
       </div>
     );
   }
