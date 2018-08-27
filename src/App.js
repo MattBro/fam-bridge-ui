@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import logo from './golden-gate.bmp';
 import './css/App.css';
 import { Switch, Route, Link } from 'react-router-dom'
 import Login from './login'

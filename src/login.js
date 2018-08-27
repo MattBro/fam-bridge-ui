@@ -3,15 +3,14 @@ import {Component} from "react";
 import {Button, Col, ControlLabel, Form, FormControl, FormGroup} from "react-bootstrap";
 import {Link} from "react-router-dom";
 
-const REACT_APP_API = "https://localhost:44311";
-
 class Login extends Component {
 
     handleSubmit(event){
         event.preventDefault();
+        console.log(process.env);
+        console.log(process.env.REACT_APP_ROOT)
 
-
-        fetch(REACT_APP_API.concat('/api/Users/AuthenticateUser'), {
+        fetch(process.env.REACT_APP_API.concat('/api/Users/AuthenticateUser'), {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',

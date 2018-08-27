@@ -15,10 +15,10 @@
     "uuid": "^3.3.2"
   },
   "scripts": {
-    "start": "react-scripts start .env",
-    "build": "react-scripts build",
+    "start": "set REACT_APP_ENV=development & react-scripts start",
+    "build": "set REACT_APP_ENV=production & react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "predeploy": "STAGE=dev npm run build",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "aws s3 sync build/ s3://fam-bridge"
   }
 }
