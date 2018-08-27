@@ -1,5 +1,6 @@
 import React from 'react';
 import {Component} from "react";
+import {Redirect} from "react-router-dom";
 
 const REACT_APP_API = "https://localhost:44311";
 const REACT_APP_API_GET_CASE_TOKENS_BY_TOKEN = REACT_APP_API.concat('/api/CaseTokens/GetCaseTokenByToken/');
@@ -10,7 +11,7 @@ const JOIN_CASE_TOKEN_KEY = 'joinCaseToken';
 class JoinCase extends Component {
     constructor(props) {
         super(props);
-        this.state = {'caseName':''}
+        this.state = {'caseName':'', goToCases:false}
         let pathname = props.location.pathname;
         let tokenPrefix = '/join-case/token=';
         if(!pathname.includes(tokenPrefix)){
@@ -22,9 +23,9 @@ class JoinCase extends Component {
 
     componentDidMount(){
 
-        var self = this
+        var self = this;
 
-        getCaseId()
+        getCaseId();
         function getCaseId() {
             return fetch(REACT_APP_API_GET_CASE_TOKENS_BY_TOKEN.concat(localStorage.getItem(JOIN_CASE_TOKEN_KEY)), {
                 method: 'GET',
@@ -70,10 +71,12 @@ class JoinCase extends Component {
 
 
     render() {
+        if(this.state.goToCases){
+            return <Redirect to={'/cases'} />
+        }
         let isLoggedIn = localStorage.userId != null;
         if(!isLoggedIn){
-            window.location.href = '/welcome'
-            return <div></div>
+            return <Redirect to={'/welcome'} />
         }
 
         var self = this;
@@ -100,7 +103,7 @@ class JoinCase extends Component {
                 })
             }).then(response => {
                 if (response.status === 201) {
-                    window.location.href = '/cases'
+                    self.setState({goToCases:true})
                 }
                 else {
                     console.log(response);

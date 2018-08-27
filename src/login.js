@@ -16,6 +16,7 @@ class Login extends Component {
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json',
+                'mode':'cors'
             },
             body: JSON.stringify({
                 email: this.inputEmail.value,
