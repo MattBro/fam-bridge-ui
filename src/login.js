@@ -10,7 +10,7 @@ class Login extends Component {
         console.log(process.env);
         console.log(process.env.REACT_APP_ROOT)
 
-        fetch(process.env.REACT_APP_API.concat('/api/Users/AuthenticateUser'), {
+        fetch(process.env.REACT_APP_API.concat('api/Users/AuthenticateUser'), {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',

@@ -4,10 +4,7 @@ import RelationshipType from "./relationship-type"
 import {Col, ControlLabel, Form, FormControl, FormGroup} from "react-bootstrap";
 
 const uuid = require('uuid');
-
-const REACT_APP_ROOT = "http://localhost:3000/";
-const REACT_APP_API = "https://localhost:44311";
-
+const REACT_APP_ROOT = process.env.REACT_APP_ROOT;
 const joinLink = REACT_APP_ROOT.concat('join-case/token=');
 
 class CaseCreated extends Component {
@@ -32,7 +29,7 @@ class CaseCreated extends Component {
     }
 
     createCaseToken(relationshipType, token) {
-        fetch(REACT_APP_API.concat('/api/CaseTokens'), {
+        fetch(process.env.REACT_APP_API.concat('api/CaseTokens'), {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',

@@ -1,5 +1,4 @@
-const REACT_APP_API = "https://localhost:44311";
-const REACT_APP_API_GET_USER = REACT_APP_API.concat('/api/Users/');
+const REACT_APP_API_GET_USER = process.env.REACT_APP_API.concat('api/Users/');
 
 class UserManager{
     getUserFirstAndLastNameById = function(userId,theName){

@@ -10,7 +10,7 @@ class CreateCase extends Component {
     handleSubmit(event){
         event.preventDefault();
 
-        fetch('https://localhost:44311/api/Cases', {
+        fetch(process.env.REACT_APP_API.concat('api/Cases'), {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',
@@ -18,8 +18,7 @@ class CreateCase extends Component {
             },
             body: JSON.stringify({
                 id: 0,
-                name: this.inputCaseName.value,
-                ownerId: localStorage.userId,
+                name: this.inputCaseName.value
             })
         }).then(response => {
             if(response.status === 201){

@@ -2,7 +2,7 @@ import React from 'react';
 import {Component} from "react";
 import {Form, FormControl, FormGroup, HelpBlock, ControlLabel, Button, Col, ButtonGroup} from "react-bootstrap"
 import {Link} from "react-router-dom";
-const REACT_APP_API = "https://localhost:44311";
+const REACT_APP_API = process.env.REACT_APP_API;
 const uuidv1 = require('uuid/v1');
 
 class Signup extends Component {
@@ -15,7 +15,7 @@ class Signup extends Component {
         event.preventDefault();
         this.token = uuidv1();
 
-        fetch(REACT_APP_API.concat('/api/Users'), {
+        fetch(REACT_APP_API.concat('api/Users'), {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',
