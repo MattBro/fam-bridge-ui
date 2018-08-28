@@ -2,14 +2,14 @@ import React, { Component } from 'react';
 import logo from './golden-gate.bmp';
 import './css/App.css';
 import { Switch, Route, Link } from 'react-router-dom'
-import Login from './login'
-import Signup from './signup'
-import CreateCase from "./create-case";
-import CaseCreated from "./case-created";
-import SignOutButton from "./sign-out-button";
-import Cases from "./cases"
-import JoinCase from "./join-case"
-import LoginOrSignup from "./login-or-signup";
+import Login from './components/authorization/login'
+import Signup from './components/authorization/signup'
+import CreateCase from "./components/cases/create-case";
+import CaseCreated from "./components/cases/case-created";
+import SignOutButton from "./components/authorization/sign-out-button";
+import Cases from "./components/cases/cases"
+import JoinCase from "./components/cases/join-case"
+import LoginOrSignup from "./components/authorization/login-or-signup";
 
 class App extends Component {
   render() {

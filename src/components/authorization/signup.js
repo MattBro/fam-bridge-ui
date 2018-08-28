@@ -8,7 +8,7 @@ const uuidv1 = require('uuid/v1');
 class Signup extends Component {
     constructor(props,context){
         super(props,context);
-        this.isCaseWorker = false;
+        this.state = {isCaseWorker:false}
     }
 
     handleSubmit(event){
@@ -38,7 +38,7 @@ class Signup extends Component {
                 localStorage.setItem('firstName',this.inputFirstName.value);
                 localStorage.setItem('sessionToken', this.token);
 
-                if(this.isCaseWorker)
+                if(this.state.isCaseWorker)
                     window.location.href = '/create-case'
                 else
                     window.location.href = '/join-case'
@@ -97,8 +97,8 @@ class Signup extends Component {
                         </Col>
 
                     <ButtonGroup>
-                        <Button onClick={()=>this.isCaseWorker=true}>Yes</Button>
-                        <Button onClick={()=>this.isCaseWorker=false}>No</Button>
+                        <Button onClick={()=>this.setState({isCaseWorker:true})} className={this.state.isCaseWorker ? 'btn-success' : ''}>Yes</Button>
+                        <Button onClick={()=>this.setState({isCaseWorker:false})} className={this.state.isCaseWorker ? '' : 'btn-success'}>No</Button>
                     </ButtonGroup>
                     </FormGroup>
                     <FormGroup>

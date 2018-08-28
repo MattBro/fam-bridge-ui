@@ -1,7 +1,7 @@
 import React from 'react';
 import {Component} from "react";
 import {BootstrapTable, TableHeaderColumn} from "react-bootstrap-table";
-import UserManager from "./business/user-manager";
+import UserManager from "../../business/user-manager";
 
 const REACT_APP_API = process.env.REACT_APP_API;
 const REACT_APP_API_GET_CASE_RELATIONSHIPS = REACT_APP_API.concat('api/CaseRelationships/GetCaseRelationshipsForUser/')

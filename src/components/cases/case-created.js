@@ -1,6 +1,6 @@
 import React from 'react';
 import {Component} from "react";
-import RelationshipType from "./relationship-type"
+import RelationshipType from "../../business/relationship-type"
 import {Col, ControlLabel, Form, FormControl, FormGroup} from "react-bootstrap";
 
 const uuid = require('uuid');
