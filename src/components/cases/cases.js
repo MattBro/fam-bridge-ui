@@ -1,7 +1,7 @@
 import React from 'react';
 import {Component} from "react";
 import {BootstrapTable, TableHeaderColumn} from "react-bootstrap-table";
-import WithCases from "./with-cases.js"
+import CasesRetriever from "./cases-retriever.js"
 
 
 class Cases extends Component{
@@ -19,4 +19,4 @@ class Cases extends Component{
     }
 }
 
-export default WithCases(Cases)
+export default CasesRetriever(Cases)

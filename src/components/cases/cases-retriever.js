@@ -39,7 +39,7 @@ class CaseBuilder{
     }
 }
 
-let WithCases = (ComposedComponent) => class extends Component{
+let CasesRetriever = (ComposedComponent) => class extends Component{
     constructor() {
         super();
         this.state = { cases: [] };
@@ -94,4 +94,4 @@ let WithCases = (ComposedComponent) => class extends Component{
 
 };
 
-export default WithCases
+export default CasesRetriever

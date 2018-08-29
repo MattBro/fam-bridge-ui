@@ -2,16 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c02e9fa5-fbac-4895-afe1-b3e4c289fb43" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/api/case-api.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/cases/with-cases.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/cases/join-case-retriever.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/case-relationships.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/case-relationships.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/business/relationship-type.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/business/relationship-type.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/business/user-manager.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/business/user-manager.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/business/with-cases.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/case-api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/case-api.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/cases/cases.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cases/cases.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/cases/create-case.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cases/create-case.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/cases/join-case.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cases/join-case.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/cases/with-cases.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cases/cases-retriever.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,11 +21,12 @@
       <usages-collector id="statistics.lifecycle.project">
         <counts>
           <entry key="project.closed" value="4" />
+          <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.8" value="1" />
           <entry key="project.open.time.9" value="2" />
-          <entry key="project.opened" value="5" />
+          <entry key="project.opened" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -39,7 +36,7 @@
           <entry key="env" value="4" />
           <entry key="html" value="5" />
           <entry key="ico" value="2" />
-          <entry key="js" value="51" />
+          <entry key="js" value="53" />
           <entry key="json" value="9" />
           <entry key="map" value="2" />
           <entry key="md" value="1" />
@@ -56,7 +53,7 @@
           <entry key="HTML" value="5" />
           <entry key="Image" value="2" />
           <entry key="JSON" value="9" />
-          <entry key="JavaScript" value="56" />
+          <entry key="JavaScript" value="58" />
           <entry key="Markdown" value="1" />
           <entry key="PLAIN_TEXT" value="5" />
           <entry key="SVG" value="2" />
@@ -71,7 +68,7 @@
           <entry key="development" value="3" />
           <entry key="env" value="25" />
           <entry key="html" value="92" />
-          <entry key="js" value="11881" />
+          <entry key="js" value="12414" />
           <entry key="json" value="222" />
           <entry key="production" value="2" />
           <entry key="relationship-type" value="202" />
@@ -84,7 +81,7 @@
           <entry key="CSS" value="47" />
           <entry key="HTML" value="92" />
           <entry key="JSON" value="222" />
-          <entry key="JavaScript" value="12377" />
+          <entry key="JavaScript" value="12910" />
           <entry key="PLAIN_TEXT" value="71" />
         </counts>
       </usages-collector>
@@ -98,8 +95,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/cases/cases.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+            <state relative-caret-position="51">
+              <caret line="3" column="45" selection-start-line="3" selection-start-column="45" selection-end-line="3" selection-end-column="45" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/cases/cases-retriever.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="799">
+              <caret line="47" column="25" selection-start-line="47" selection-start-column="25" selection-end-line="47" selection-end-column="25" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -108,12 +114,12 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/cases/with-cases.js">
+        <entry file="file://$PROJECT_DIR$/src/components/cases/join-case-retriever.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="63" column="42" selection-start-line="63" selection-start-column="42" selection-end-line="63" selection-end-column="42" />
+            <state relative-caret-position="131">
+              <caret line="19" column="19" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
               <folding>
-                <element signature="e#0#26#0" expanded="true" />
+                <element signature="e#0#32#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -122,8 +128,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/cases/create-case.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="14" column="27" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
+            <state relative-caret-position="131">
+              <caret line="24" column="28" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -134,17 +140,23 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/cases/join-case.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="6" column="62" selection-start-line="6" selection-start-column="62" selection-end-line="6" selection-end-column="62" />
+            <state relative-caret-position="51">
+              <caret line="20" column="9" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/api/case-relationships.js">
+        <entry file="file://$PROJECT_DIR$/src/components/authorization/login.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-line="16" />
+            <state relative-caret-position="-323">
+              <caret line="12" column="48" selection-start-line="12" selection-start-column="48" selection-end-line="12" selection-end-column="48" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -152,8 +164,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/api/case-api.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="38" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
+            <state relative-caret-position="275">
+              <caret line="30" column="7" selection-start-line="30" selection-start-column="7" selection-end-line="30" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -192,11 +204,9 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>this.setState</find>
       <find>config</find>
       <find>webp</find>
       <find>REACT_APP_FAM_BRIDGE_ROOT</find>
-      <find>debugger</find>
       <find>window</find>
       <find>wind</find>
       <find>uuidv1</find>
@@ -218,6 +228,12 @@
       <find>debugg</find>
       <find>relationshiptyp</find>
       <find>coordi</find>
+      <find>gotocas</find>
+      <find>state</find>
+      <find>self</find>
+      <find>goto</find>
+      <find>gotoc</find>
+      <find>debugger</find>
     </findStrings>
     <replaceStrings>
       <replace>this.props</replace>
@@ -270,10 +286,12 @@
         <option value="$PROJECT_DIR$/src/api/case-relationships.js" />
         <option value="$PROJECT_DIR$/src/business/relationship-type.js" />
         <option value="$PROJECT_DIR$/src/components/cases/create-case.js" />
-        <option value="$PROJECT_DIR$/src/components/cases/cases.js" />
         <option value="$PROJECT_DIR$/src/business/user-manager.js" />
-        <option value="$PROJECT_DIR$/src/api/case-api.js" />
         <option value="$PROJECT_DIR$/src/components/cases/with-cases.js" />
+        <option value="$PROJECT_DIR$/src/components/cases/cases-retriever.js" />
+        <option value="$PROJECT_DIR$/src/components/cases/cases.js" />
+        <option value="$PROJECT_DIR$/src/api/case-api.js" />
+        <option value="$PROJECT_DIR$/src/components/cases/join-case-retriever.js" />
         <option value="$PROJECT_DIR$/src/components/cases/join-case.js" />
       </list>
     </option>
@@ -309,6 +327,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -349,6 +368,13 @@
               <item name="fam-bridge-ui" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="authorization" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="fam-bridge-ui" type="b2602c69:ProjectViewProjectNode" />
+              <item name="fam-bridge-ui" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="cases" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -362,13 +388,12 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1535505099881" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1535583304552" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -413,21 +438,23 @@
       <workItem from="1535410854127" duration="1945000" />
       <workItem from="1535413282092" duration="4635000" />
       <workItem from="1535494644180" duration="10535000" />
+      <workItem from="1535580497531" duration="2770000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="67447000" />
+    <option name="totallyTimeSpent" value="70217000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Image Layers" order="0" />
       <window_info id="Designer" order="1" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="npm" order="4" sideWeight="0.5010571" side_tool="true" weight="0.24966443" />
-      <window_info content_ui="combo" id="Project" order="5" sideWeight="0.4989429" visible="true" weight="0.2590604" />
+      <window_info content_ui="combo" id="Project" order="5" sideWeight="0.4989429" visible="true" weight="0.2624161" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info active="true" anchor="bottom" id="Terminal" order="0" visible="true" weight="0.32907802" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
@@ -519,9 +546,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="10" column="9" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -599,15 +623,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/favicon.ico">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/public/favicon.ico" />
     <entry file="file://$PROJECT_DIR$/src/App.test.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/logo.svg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/logo.svg" />
     <entry file="file://$PROJECT_DIR$/public/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
@@ -615,28 +635,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/authorization/login.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="12" column="48" selection-start-line="12" selection-start-column="48" selection-end-line="12" selection-end-column="48" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/authorization/signup.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="320">
           <caret line="100" column="78" selection-start-line="100" selection-start-column="78" selection-end-line="100" selection-end-column="78" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/business/relationship-type.js">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/api/case-relationships.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -645,30 +649,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/business/relationship-type.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/cases/case-created.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="65" selection-start-line="2" selection-start-column="63" selection-end-line="2" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/cases/cases.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/cases/create-case.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="14" column="27" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -681,15 +668,52 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/api/case-api.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="38" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
+        <state relative-caret-position="275">
+          <caret line="30" column="7" selection-start-line="30" selection-start-column="7" selection-end-line="30" selection-end-column="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/cases/with-cases.js">
+    <entry file="file://$PROJECT_DIR$/src/components/cases/cases.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="63" column="42" selection-start-line="63" selection-start-column="42" selection-end-line="63" selection-end-column="42" />
+        <state relative-caret-position="51">
+          <caret line="3" column="45" selection-start-line="3" selection-start-column="45" selection-end-line="3" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/cases/create-case.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="24" column="28" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/cases/cases-retriever.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="799">
+          <caret line="47" column="25" selection-start-line="47" selection-start-column="25" selection-end-line="47" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/cases/join-case-retriever.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="19" column="19" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/authorization/login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-323">
+          <caret line="12" column="48" selection-start-line="12" selection-start-column="48" selection-end-line="12" selection-end-column="48" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
@@ -698,8 +722,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/cases/join-case.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="6" column="62" selection-start-line="6" selection-start-column="62" selection-end-line="6" selection-end-column="62" />
+        <state relative-caret-position="51">
+          <caret line="20" column="9" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
