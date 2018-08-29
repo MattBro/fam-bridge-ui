@@ -4,7 +4,7 @@ import {Redirect} from "react-router-dom";
 
 const REACT_APP_API = process.env.REACT_APP_API;
 const REACT_APP_API_GET_CASE_TOKENS_BY_TOKEN = REACT_APP_API.concat('api/CaseTokens/GetCaseTokenByToken/');
-const REACT_APP_API_GET_CASE = REACT_APP_API.concat('api/Cases/');
+const REACT_APP_API_GET_CASE = REACT_APP_API.concat('api/CasesCoordinator/');
 const REACT_APP_API_CASE_RELATIONSHIP = REACT_APP_API.concat('api/CaseRelationships/');
 const JOIN_CASE_TOKEN_KEY = 'joinCaseToken';
 

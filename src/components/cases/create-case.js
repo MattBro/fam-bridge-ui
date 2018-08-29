@@ -10,7 +10,7 @@ class CreateCase extends Component {
     handleSubmit(event){
         event.preventDefault();
 
-        fetch(process.env.REACT_APP_API.concat('api/Cases'), {
+        fetch(process.env.REACT_APP_API.concat('api/CasesCoordinator'), {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',

@@ -1,9 +1,9 @@
 const REACT_APP_API_GET_USER = process.env.REACT_APP_API.concat('api/Users/');
 
 class UserManager{
-    getUserFirstAndLastNameById = function(userId,theName){
+    static getUserFirstAndLastNameById = function(userId,theName){
         fetch(REACT_APP_API_GET_USER.concat(userId), {
-            method: 'POST',
+            method: 'GET',
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json',
