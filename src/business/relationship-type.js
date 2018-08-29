@@ -1,8 +1,7 @@
-import React from 'react';
-
 const RelationshipType = {
-    BirthFamily: "BirthFamily",
-    FosterFamily: "FosterFamily"
+    FosterFamily:0,
+    BirthFamily:1,
+    CaseWorker:2
 };
 
 export default RelationshipType

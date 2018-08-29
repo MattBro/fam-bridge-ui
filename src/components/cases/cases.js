@@ -1,13 +1,11 @@
 import React from 'react';
 import {Component} from "react";
 import {BootstrapTable, TableHeaderColumn} from "react-bootstrap-table";
-import WithCases from "../../business/with-cases.js"
+import WithCases from "./with-cases.js"
 
 
 class Cases extends Component{
     render(){
-
-
         return (<div>
             <h1>Your Cases</h1>
             <p>Listed below is the case or cases you are involved with.</p>
